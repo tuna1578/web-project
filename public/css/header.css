@@ -1,0 +1,17 @@
+.header{
+ margin-top: 80px;
+ width: 100%;
+ position: relative;
+ display: flex;
+ justify-content: center;
+ font-family: "Ubuntu Sans Mono", monospace;
+ font-size: large;
+}
+
+.header h1, .header h3{
+    position: absolute;
+}
+
+.header h1 {
+    top: -50px;
+}

@@ -1,0 +1,31 @@
+.topbar{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.3rem;
+    background-color: white;
+}
+.topbar .right {
+flex: 5;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.topbar .center{
+flex: 7;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.topbar .wrapper{
+    display: flex;
+    width: 100%;
+    max-width: 1080px;
+}
