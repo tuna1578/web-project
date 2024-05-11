@@ -1,0 +1,16 @@
+.ozgecmis{
+    margin-top: 20px;
+    margin-bottom: 60px;
+    flex: 12;
+    display: flex;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    justify-content: center;
+    width: 100%;
+}
+.ozgecmis .yazilar{
+    border: 3px solid rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 15px;
+    background-color: white;
+}
