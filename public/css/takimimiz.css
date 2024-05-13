@@ -1,0 +1,31 @@
+.takimimiz{
+    margin-top: 70px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: large;
+}
+
+.takimimiz .wrapper{
+    display: flex;
+    padding: 0 10px;
+    gap: 40px;
+}
+
+.takimimiz .solkisim{
+    flex: 8;
+    border: 3px solid rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+    background-color: white;
+}
+
+.takimimiz .sagkisim{
+    flex: 4;
+    border: 3px solid rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 15px;
+    background-color: #dc0000;
+}
