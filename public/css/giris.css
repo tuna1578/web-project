@@ -1,0 +1,60 @@
+.giris{
+    font-family: "Josefin Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.giris .hepsi{
+    border: 3px solid rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 50px;
+    background-color: white;
+}
+.giris h1{
+    font-size: 36px;
+    text-align: center;
+}
+.giris .input-box{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+    font-size: 16px;
+}
+
+.input-box input::placeholder{
+    color: black;
+}
+
+.input-box i{
+    position: relative;
+    font-size: 20px;
+    left: 250px;
+    bottom: 35px;
+}
+.giris .remember{
+display: flex;
+margin-bottom: 20px;
+}
+.giris .btn{
+    width: 100%;
+    height: 45px;
+    background-color: gray;
+    color: white;
+    justify-content: center;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
