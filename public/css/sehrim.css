@@ -64,3 +64,24 @@ text-decoration: underline;
     background-color: white;
     padding: 15px;
 }
+.slider-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+  }
+  
+  .slide img {
+    width: 325px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
