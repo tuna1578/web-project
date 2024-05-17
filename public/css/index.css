@@ -2,9 +2,9 @@
 @import './topbar.css';
 @import './fontFamily.css';
 @import './hakkinda.css';
-@import './header.css';
 @import './sidebar.css';
 @import './ozgecmis.css';
 @import './sehrim.css';
 @import './takimimiz.css';
-@import './giris.css'
+@import './login.css';
+@import './iletisim.css';

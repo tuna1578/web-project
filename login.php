@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$error_message = "";
+$error_message = " ";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $input_username = isset($_POST['username']) ? trim($_POST['username']) : '';
@@ -10,8 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($input_username) || empty($input_password)) {
         $error_message = "Kullanıcı adı ve şifre boş bırakılamaz.";
     } elseif (!filter_var($input_username, FILTER_VALIDATE_EMAIL)) {
-        $error_message = "Kullanıcı adı geçerli bir email adresi olmalıdır.";
-    } else {
+            $error_message = "Kullanıcı adı email adresi olmalıdır.";
+        } else {
         $valid_username = "admin@example.com";
         $valid_password = "password123";
 
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: index.php");
             exit();
         } else {
-            $error_message = "Yanlış kullanıcı adı veya şifre. Tekrar deneyiniz.";
+            $error_message = "Yanlış kullanıcı adı veya şifre.";
         }
     }
 }
@@ -46,6 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a href="pages/ozgecmis.html">Özgeçmiş</a>
                 <a href="pages/sehrim.html">Şehrim</a>
                 <a href="pages/takimimiz.html">Takımımız</a>
+                <a href="pages/iletisim.html">İletişim</a>
+
             </div>
             <div class="right">
                 <a href="login.php">Giriş Yap</a>

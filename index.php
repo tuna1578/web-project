@@ -3,6 +3,11 @@ session_start();
 
 // Kullanıcı oturumda ise ve kullanıcı adı set edilmişse, $logged_in true olacak
 $logged_in = isset($_SESSION['username']) && !empty($_SESSION['username']);
+
+if (!$logged_in) {
+    header('Location: login.php');
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +24,6 @@ $logged_in = isset($_SESSION['username']) && !empty($_SESSION['username']);
         <h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
         <p>You have successfully logged in.</p>
     <?php else: ?>
-        <!-- Oturum açılmamışsa burada hiçbir şey yapılmayacak -->
     <?php endif; ?>
 
     <div class="topbar">
@@ -29,10 +33,11 @@ $logged_in = isset($_SESSION['username']) && !empty($_SESSION['username']);
                 <a href="pages/ozgecmis.html">Özgeçmiş</a>
                 <a href="pages/sehrim.html">Şehrim</a>
                 <a href="pages/takimimiz.html">Takımımız</a>
+                <a href="pages/iletisim.html">İletişim</a>
             </div>
             <div class="right">
                 <a href="login.php">Giriş Yap</a>
-            </div>           
+            </div>         
         </div>
     </div>
 
