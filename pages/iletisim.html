@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/index.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <div class="topbar">
         <div class="wrapper">
             <div class="center">
@@ -20,61 +22,65 @@
             </div>
             <div class="right">
                 <a href="../login.php">Giriş Yap</a>
-            </div>           
+            </div>
         </div>
     </div>
 
     <div class="iletisim">
         <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim Formu</title>
-</head>
-<body>
+        <html lang="en">
 
-<div class="iletisim">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>İletişim Formu</title>
+        </head>
 
-    
-    <div id="app">
-        <form @submit.prevent="submitForm">
-            <div class="form-container">
-                <h1 style="margin-bottom: 20px; display: flex; justify-content: center; text-decoration: underline;">İletişim Formu</h1>
+        <body>
 
-                <label for="firstName">Ad:</label>
-                <input type="text" id="firstName" v-model="firstName" required><br><br>
+            <div class="iletisim">
 
-                <label for="lastName">Soyad:</label>
-                <input type="text" id="lastName" v-model="lastName" required><br><br>
 
-                <label for="email">E-posta:</label>
-                <input type="email" id="email" v-model="email" required><br><br>
+                <div id="app">
+                    <form @submit.prevent="submitForm">
+                        <div class="form-container">
+                            <h1
+                                style="margin-bottom: 20px; display: flex; justify-content: center; text-decoration: underline;">
+                                İletişim Formu</h1>
 
-                <label for="subject">Konu:</label>
-                <input type="text" id="subject" v-model="subject" required><br><br>
+                            <label for="firstName">Ad:</label>
+                            <input type="text" id="firstName" v-model="firstName" required><br><br>
 
-                <label for="message">Mesaj:</label><br>
-                <textarea id="message" v-model="message" rows="4" required></textarea><br><br>
+                            <label for="lastName">Soyad:</label>
+                            <input type="text" id="lastName" v-model="lastName" required><br><br>
 
-                <button type="button" @click="validateFormVue">Gönder (Vue.js)</button>
-                <button type="button" @click="validateFormJS">Gönder (JavaScript)</button>
-                <div id="errorMessages" v-html="errorMessages"></div>
+                            <label for="email">E-posta:</label>
+                            <input type="email" id="email" v-model="email" required><br><br>
+
+                            <label for="subject">Konu:</label>
+                            <input type="text" id="subject" v-model="subject" required><br><br>
+
+                            <label for="message">Mesaj:</label><br>
+                            <textarea id="message" v-model="message" rows="4" required></textarea><br><br>
+
+                            <button type="button" @click="validateFormVue">Gönder (Vue.js)</button>
+                            <button type="button" @click="validateFormJS">Gönder (JavaScript)</button>
+                            <div id="errorMessages" v-html="errorMessages"></div>
+                        </div>
+
+                    </form>
+
+
+                </div>
             </div>
-                        
-        </form>
-        
-        
-    </div>
-</div>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="../public/js/validation.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+            <script src="../public/js/validation.js"></script>
 
 
 
-</body>
-</html>
+        </body>
 
+        </html>

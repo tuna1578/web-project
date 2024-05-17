@@ -10,7 +10,7 @@ new Vue({
     },
     methods: {
         submitForm() {
-            this.errorMessages = ''; // Temizleme
+            this.errorMessages = '';
 
             if (this.firstName.trim() === '') {
                 this.errorMessages += "<p>Ad alanı boş bırakılamaz.</p>";
@@ -31,7 +31,6 @@ new Vue({
             }
 
             if (this.errorMessages === '') {
-                // Vue.js ile form gönderimi
                 alert('Vue.js ile form gönderildi');
             }
         },
@@ -50,7 +49,7 @@ new Vue({
             var message = document.getElementById("message").value;
             var errorMessages = document.getElementById("errorMessages");
 
-            errorMessages.innerHTML = ""; // Temizleme
+            errorMessages.innerHTML = "";
 
             if (firstName.trim() === '') {
                 errorMessages.innerHTML += "<p>Ad alanı boş bırakılamaz.</p>";
@@ -71,7 +70,6 @@ new Vue({
             }
 
             if (errorMessages.innerHTML === '') {
-                // JavaScript ile form gönderimi
                 alert('JavaScript ile form gönderildi');
             }
         }

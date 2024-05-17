@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$error_message = " ";
+$error_message = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $input_username = isset($_POST['username']) ? trim($_POST['username']) : '';
@@ -10,14 +10,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($input_username) || empty($input_password)) {
         $error_message = "Kullanıcı adı ve şifre boş bırakılamaz.";
     } elseif (!filter_var($input_username, FILTER_VALIDATE_EMAIL)) {
-            $error_message = "Kullanıcı adı email adresi olmalıdır.";
-        } else {
-        $valid_username = "admin@example.com";
-        $valid_password = "password123";
+        $error_message = "Kullanıcı adı email adresi olmalıdır.";
+    } else {
+        $valid_username = "g231210052@sakarya.edu.tr";
+        $valid_password = "g231210052";
 
         if ($input_username === $valid_username && $input_password === $valid_password) {
             $_SESSION['username'] = $input_username;
-            header("Location: index.php");
+            header("Location: login2.php");
             exit();
         } else {
             $error_message = "Yanlış kullanıcı adı veya şifre.";
@@ -56,32 +56,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="giris">
-       <div class="hepsi">
-       
-        <form action="../login.php" method="POST">
-            
-            <h1>Giriş</h1>
-            <div class="input-box">
-                <input type="text" id="username" name="username" placeholder="Kullanıcı Adı" required>
-                <i class='bx bxs-user' ></i>
-            </div>
-            <div class="input-box">
-                <input type="password" id="password" name="password" placeholder="Şifre" required>
-                <i class='bx bxs-lock-alt' ></i>
-            </div>
+        <div class="hepsi">
 
-            <div class="remember">
-                <label><input type="checkbox">Beni Hatırla</label>
-            </div>
+            <form action="../login.php" method="POST">
 
-            <button type="submit" value="login" class="btn">Giriş Yap</button>
-            
-            <?php
-            if ($error_message) {
-            echo '<p style="color:red;">' . htmlspecialchars($error_message) . '</p>';
-            }
-            ?>
+                <h1>Giriş</h1>
+                <div class="input-box">
+                    <input type="text" id="username" name="username" placeholder="Kullanıcı Adı" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="password" name="password" placeholder="Şifre" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <button type="submit" value="login" class="btn">Giriş Yap</button>
 
-        </form>
-       </div>
+                <?php
+                if ($error_message) {
+                    echo '<p style="color:red; margin-top: 15px;">' . htmlspecialchars($error_message) . '</p>';
+                }
+                ?>
+
+            </form>
+        </div>
     </div>

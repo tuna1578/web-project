@@ -1,30 +1,14 @@
-<?php
-session_start();
-
-// Kullanıcı oturumda ise ve kullanıcı adı set edilmişse, $logged_in true olacak
-$logged_in = isset($_SESSION['username']) && !empty($_SESSION['username']);
-
-if (!$logged_in) {
-    header('Location: login.php');
-    exit();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/index.css">
-    <title>Document</title>
+    <title>Document</title>    
 </head>
-<body>
 
-    <?php if ($logged_in): ?>
-        <h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
-        <p>You have successfully logged in.</p>
-    <?php else: ?>
-    <?php endif; ?>
+<body>
 
     <div class="topbar">
         <div class="wrapper">
@@ -37,7 +21,7 @@ if (!$logged_in) {
             </div>
             <div class="right">
                 <a href="login.php">Giriş Yap</a>
-            </div>         
+            </div>
         </div>
     </div>
 
@@ -50,13 +34,13 @@ if (!$logged_in) {
         <div class="wrapper">
             <div class="yazilar">
                 <h2>Ben Ahmet Tunahan Yiğit.</h2>
-                    <p> <br><br>  Sakarya üniversitesinde bilgisayar mühendisliği öğrencisiyim. 
-                        <br><br>  Okuduğum bölümden anlaşılmak üzere bilgisayarda zaman geçirmeyi seviyorum.
-                        <br><br>  Basketbol oynamayı çok severim, lisede okullar arası maçta oynamışlığım olmuştur.
-                        <br><br>  Müzik dinlemeye bayılırım, çoğunlukla yabancı müzikler dinlerim.
-                        <br><br>  Müzik yapma üzerinde de kendimi geliştirmeye çalışıyorum, sanatçı olmak istiyorum.
-                        <br><br>  Ama genel olarak okuduğum bölümden ve okulumdan memnunum.
-                    </p>
+                <p> <br><br> Sakarya üniversitesinde bilgisayar mühendisliği öğrencisiyim.
+                    <br><br> Okuduğum bölümden anlaşılmak üzere bilgisayarda zaman geçirmeyi seviyorum.
+                    <br><br> Basketbol oynamayı çok severim, lisede okullar arası maçta oynamışlığım olmuştur.
+                    <br><br> Müzik dinlemeye bayılırım, çoğunlukla yabancı müzikler dinlerim.
+                    <br><br> Müzik yapma üzerinde de kendimi geliştirmeye çalışıyorum, sanatçı olmak istiyorum.
+                    <br><br> Ama genel olarak okuduğum bölümden ve okulumdan memnunum.
+                </p>
             </div>
             <div class="sidebar">
                 <img src="/pictures/x.jpg" style="height: 300px;" alt="">
@@ -64,6 +48,11 @@ if (!$logged_in) {
         </div>
     </div>
 
-</body>
-</html>
+    <div id="teamList">
 
+    </div>
+
+    <script src="public/js/main.js" defer></script>
+</body>
+
+</html>

@@ -1,30 +1,32 @@
-.hakkinda .yazilar{
+.hakkinda .yazilar {
     margin-top: 70px;
     flex: 8;
-    border: 3px solid rgba(0,0,0,0.3);
+    border: 3px solid rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     padding: 15px;
     width: 100%;
     font-family: "Josefin Sans", sans-serif;
     font-size: large;
     background-color: white;
-    
+
 }
-.hakkinda .wrapper{
+
+.hakkinda .wrapper {
     display: flex;
     width: 100%;
     max-width: 1366px;
     padding: 0 10px;
     gap: 20px;
 }
-.hakkinda{
+
+.hakkinda {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 0 10px;
 }
 
-.header{
+.header {
     margin-top: 80px;
     width: 100%;
     position: relative;
@@ -33,20 +35,21 @@
     font-family: "Ubuntu Sans Mono", monospace;
     font-size: large;
 }
-   
-.header h1, .header h3{
-       position: absolute;
+
+.header h1,
+.header h3 {
+    position: absolute;
 }
-   
+
 .header h1 {
     top: -50px;
 }
 
-   .sidebar{
+.sidebar {
     margin-top: 70px;
     flex: 4;
-    border: 3px solid rgba(0,0,0,0.3);
+    border: 3px solid rgba(0, 0, 0, 0.3);
     border-radius: 20px;
-    padding:15px;
+    padding: 15px;
     background-color: white;
 }
