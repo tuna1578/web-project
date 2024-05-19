@@ -40,6 +40,7 @@
                     <br><br> Müzik dinlemeye bayılırım, çoğunlukla yabancı müzikler dinlerim.
                     <br><br> Müzik yapma üzerinde de kendimi geliştirmeye çalışıyorum, sanatçı olmak istiyorum.
                     <br><br> Ama genel olarak okuduğum bölümden ve okulumdan memnunum.
+                    <br><br> Film izlemeyi de çok severim.
                 </p>
             </div>
             <div class="sidebar">
@@ -48,11 +49,7 @@
         </div>
     </div>
 
-    <div id="teamList">
-
-    </div>
-
-    <script src="public/js/main.js" defer></script>
-</body>
+    <div id="movies" class="movies"></div>
+    <script src="public/js/main.js"></script>
 
 </html>

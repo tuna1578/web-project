@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/index.css">
+    <script src="../public/js/bootstrap/bootstrap.js"></script>
+    <link rel="stylesheet" href="../public/css/bootstrap/bootstrap.min.css">
     <title>Document</title>
 </head>
 
@@ -18,7 +20,6 @@
                 <a href="sehrim.html">Şehrim</a>
                 <a href="takimimiz.html">Takımımız</a>
                 <a href="iletisim.html">İletişim</a>
-
             </div>
             <div class="right">
                 <a href="../login.php">Giriş Yap</a>
@@ -77,8 +78,26 @@
         </div>
     </div>
 
-    <script src="../public/js/slider.js"></script>
-
-</body>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../pictures/bilecik3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../pictures/bilecik2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../pictures/bilecik1.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
 </html>

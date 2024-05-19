@@ -1,16 +1,26 @@
-const data = null;
+const apiKey = '44312b00c261eb2dc776121e4b09bb0b';
+const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
 
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    const movies = data.results;
+    let moviesHTML = '';
 
-xhr.addEventListener('readystatechange', function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
-	}
-});
+    movies.forEach(movie => {
+      const movieHTML = `
+        <div class="movie">
+          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+          <h2>${movie.title}</h2>
+          <p>Rating: ${movie.vote_average}</p>
+        </div>
+      `;
+      moviesHTML += movieHTML;
+    });
 
-xhr.open('GET', 'https://api-basketball.p.rapidapi.com/standings/groups?season=2019-2020&league=12');
-xhr.setRequestHeader('X-RapidAPI-Key', '0a68cd657amsh10d5aaa26bfcf36p1f5bc3jsn3faeed31935a');
-xhr.setRequestHeader('X-RapidAPI-Host', 'api-basketball.p.rapidapi.com');
-
-xhr.send(data);
+    document.getElementById('movies').innerHTML = moviesHTML;
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+    document.getElementById('movies').innerHTML = '<p>Veri alınırken bir hata oluştu. Lütfen daha sonra tekrar deneyin.</p>';
+  });
